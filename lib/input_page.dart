@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'small_cards.dart';
+import 'gender_icon.dart';
+
+const bottomContainerH = 60.0;
+const cardsColor = Color(0xFF1D1E33);
 
 class InputPage extends StatefulWidget {
   @override
@@ -19,12 +25,20 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: Smallcard(
-                    colour: Color(0xFF1D1E33),
+                    colour: cardsColor,
+                    cardChild: Gendericon(
+                      gendericon: FontAwesomeIcons.mars,
+                      gendertype: "MALE",
+                    ),
                   ),
                 ),
                 Expanded(
                   child: Smallcard(
-                    colour: Color(0xFF1D1E33),
+                    colour: cardsColor,
+                    cardChild: Gendericon(
+                      gendericon: FontAwesomeIcons.venus,
+                      gendertype: "FEMALE",
+                    ),
                   ),
                 ),
               ],
@@ -32,7 +46,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: Smallcard(
-              colour: Color(0xFF1D1E33),
+              colour: cardsColor,
             ),
           ),
           Expanded(
@@ -40,44 +54,25 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: Smallcard(
-                    colour: Color(0xFF1D1E33),
+                    colour: cardsColor,
                   ),
                 ),
                 Expanded(
                   child: Smallcard(
-                    colour: Color(0xFF1D1E33),
+                    colour: cardsColor,
                   ),
                 ),
               ],
             ),
+          ),
+          Container(
+            color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: bottomContainerH,
           ),
         ],
       ),
     );
   }
 }
-
-class Smallcard extends StatelessWidget {
-  Smallcard({required this.colour});
-
-  final Color colour;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: colour,
-      ),
-    );
-  }
-}
-
-// child: Container(
-//   margin: EdgeInsets.all(15.0),
-//   decoration: BoxDecoration(
-//     borderRadius: BorderRadius.circular(10.0),
-//     color: Color(0xFF1D1E33),
-//   ),
-// ),
