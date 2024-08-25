@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/input_page.dart';
-import 'package:quiz/small_cards.dart';
+import 'input_page.dart';
+import 'small_cards.dart';
 
 class result extends StatelessWidget {
   result(

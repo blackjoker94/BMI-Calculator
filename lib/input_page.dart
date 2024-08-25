@@ -127,9 +127,9 @@ class _InputPageState extends State<InputPage> {
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                      RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                      RoundSliderOverlayShape(overlayRadius: 30.0),
                       thumbColor: Color(0xFFEB1555),
                       activeTrackColor: Colors.white,
                       overlayColor: Color(0x29EB1555),
@@ -244,10 +244,10 @@ class _InputPageState extends State<InputPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => result(
-                            bmiResult: calc.CAlCbmi(),
-                            textResult: calc.getresult(),
-                            interResult: calc.getInterpretation(),
-                          )));
+                        bmiResult: calc.CAlCbmi(),
+                        textResult: calc.getresult(),
+                        interResult: calc.getInterpretation(),
+                      )));
             },
           ),
         ],
@@ -268,12 +268,12 @@ class Calcbuttom extends StatelessWidget {
       child: Container(
         child: Center(
             child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 25.0,
-            fontWeight: FontWeight.bold,
-          ),
-        )),
+              text,
+              style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),
+            )),
         color: Color(0xFFEB1555),
         margin: EdgeInsets.only(top: 10.0),
         width: double.infinity,
